@@ -1,0 +1,56 @@
+{
+  "type": "network",
+  "version": "1.0",
+  "data": "data.json",
+  "logo": {
+    "file": "",
+    "link": "",
+    "text": "Gephi"
+  },
+  "text": {
+    "more": "Grafo do mapa do Brooklyn com destaque para acidenrtes de trânsito",
+    "intro": "Grafo do mapa do Brooklyn com destaque para acidenrtes de trânsito",
+    "title": "Grafo de Acidentes de trânsito no Brooklyn "
+  },
+  "legend": {
+    "edgeLabel": "Ruas",
+    "colorLabel": "Numero de acidentes",
+    "nodeLabel": "Junções"
+  },
+  "features": {
+    "search": true,
+    "groupSelectorAttribute": "street_name",
+    "hoverBehavior": "dim"
+  },
+  "informationPanel": {
+  "groupByEdgeDirection": true,
+  "dataAttributes": [
+    "street_name",
+    "accident_count"
+  ]
+},
+  "sigma": {
+    "drawingProperties": {
+      "defaultEdgeType": "curve",
+      "defaultHoverLabelBGColor": "#002147",
+      "defaultLabelBGColor": "#ddd",
+      "activeFontStyle": "bold",
+      "defaultLabelColor": "#000",
+      "labelThreshold": 10,
+      "defaultLabelHoverColor": "#fff",
+      "fontStyle": "bold",
+      "hoverFontStyle": "bold",
+      "defaultLabelSize": 14
+    },
+    "graphProperties": {
+      "maxEdgeSize": 0.5,
+      "minEdgeSize": 0.2,
+      "minNodeSize": 1,
+      "maxNodeSize": 7
+    },
+    "mouseProperties": {
+      "maxRatio": 20,
+      "minRatio": 0.75
+    }
+  }
+}
