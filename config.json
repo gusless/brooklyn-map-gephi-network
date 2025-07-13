@@ -23,12 +23,9 @@
     "hoverBehavior": "dim"
   },
   "informationPanel": {
-  "groupByEdgeDirection": true,
-  "dataAttributes": [
-    "street_name",
-    "accident_count"
-  ]
-},
+    "groupByEdgeDirection": true,
+    "imageAttribute": "accident_count"
+  },
   "sigma": {
     "drawingProperties": {
       "defaultEdgeType": "curve",
