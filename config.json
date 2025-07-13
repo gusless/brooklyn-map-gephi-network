@@ -19,7 +19,7 @@
   },
   "features": {
     "search": true,
-    "groupSelectorAttribute": "street_name",
+    "groupSelectorAttribute": "accident_count",
     "hoverBehavior": "dim"
   },
   "informationPanel": {

@@ -1,5 +1,32 @@
 var sigInst, canvas, $GP
 
+const colorToLabel = {
+  "rgb(220,220,220)": "0 acidentes",
+  "rgb(255,255,204)": "1 acidentes",
+  "rgb(255,255,178)": "2 acidentes",
+  "rgb(255,255,153)": "3 acidentes",
+  "rgb(255,255,128)": "4 acidentes",
+  "rgb(255,255,102)": "5 acidentes",
+  "rgb(255,255,77)":  "6 acidentes",
+  "rgb(255,255,51)":  "7 acidentes",
+  "rgb(255,255,26)":  "8 acidentes",
+  "rgb(255,255,0)":   "9 acidentes",
+  "rgb(255,229,0)":   "10 acidentes",
+  "rgb(255,204,0)":   "11 acidentes",
+  "rgb(255,178,0)":   "12 acidentes",
+  "rgb(255,153,0)":   "13 acidentes",
+  "rgb(255,128,0)":   "14 acidentes",
+  "rgb(255,102,0)":   "15 acidentes",
+  "rgb(255,77,0)":    "16 acidentes",
+  "rgb(255,51,0)":    "17 acidentes",
+  "rgb(255,26,0)":    "18 acidentes",
+  "rgb(255,0,0)":     "19 acidentes",
+  "rgb(230,0,0)":     "20 acidentes",
+  "rgb(163,62,36)":   "31 acidentes",
+  "rgb(128,44,23)":   "32 acidentes",
+  "rgb(46,1,1)":     "85 acidentes"
+};
+
 //Load configuration file
 var config={};
 
@@ -277,7 +304,16 @@ function configSigmaElements(config) {
     $GP.bg2 = $(sigInst._core.domElements.bg2);
     var a = [],
         b,x=1;
-		for (b in sigInst.clusters) a.push('<div style="line-height:12px"><a href="#' + b + '"><div style="width:40px;height:12px;border:1px solid #fff;background:' + b + ';display:inline-block"></div> Group ' + (x++) + ' (' + sigInst.clusters[b].length + ' members)</a></div>');
+		for (b in sigInst.clusters) {
+            console.log("Cor do grupo:", b);
+            const label = colorToLabel[b] || "Grupo indefinido";
+            a.push(
+                    '<div style="line-height:12px">' +
+                    '<a href="#' + b + '">' +
+                    '<div style="width:40px;height:12px;border:1px solid #fff;background:' + b + ';display:inline-block"></div> ' +
+                    label + ' (' + sigInst.clusters[b].length + ' junções)</a></div>'
+            );
+        }
     //a.sort();
     $GP.cluster.content(a.join(""));
     b = {
